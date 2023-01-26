@@ -3,6 +3,9 @@ import { useNavigate, Link } from "react-router-dom";
 import { useState } from "react";
 import React from "react";
 import { useEffect } from "react";
+import Todos from "./Todos";
+import TodoForm from "./TodoForm";
+import Login from "./Login";
 
 function Profile() {
   const [navbar, setNavbar] = useState(false);
@@ -97,9 +100,13 @@ function Profile() {
               </div>
             </div>
           </nav>
+          <TodoForm />
+          <Todos />
         </div>
       ) : (
-        <div></div>
+        <>
+          <Login />
+        </>
       )}
     </>
   );
